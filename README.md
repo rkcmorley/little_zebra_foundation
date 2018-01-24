@@ -17,11 +17,12 @@ Day One
 Day Two and Three
 --------------
 - Created CSS file for the appearance of the webpage on desktop and mobile
-- Format HTML and CSS structure
+- Formatted HTML and CSS structure
 - Used Git to upload source code
 
 Day Four
 -------------- 
 - Updated CSS file for the webpage
-- Created jQuery file for the donation widget's function (Form validation, image change based on selection and buttons behaviour)
+- Created a jQuery file for the donation widget's function (Form validation, image change based on selection and buttons behaviour)
+- Added Foundation's Abide jQuery to make a functional form validation
 - Used Git for version control
