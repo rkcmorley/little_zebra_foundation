@@ -11,7 +11,8 @@
 
 Day One
 --------------
-Created the HTML structure for the webpage
+- Created the HTML structure for the webpage
+- Edited images with Adobe Photoshop
 
 Day Two and Three
 --------------
