@@ -43,18 +43,17 @@
             <p>Help protecting the planet today, become a Little Zebra ambassador</p>
         </header>
         <section class="large-8 large-centered columns donation-box">
-
             <div class="large-9 columns">
                 <h2>Make a Donation</h2>
-                <form>
+                <form data-abide novalidate>       
                     <div class="medium-4 large-3 columns">
                         <label class="text-left">I want to help</label>
                     </div>
                     <div class="large-9 columns end">
-                    <select>
-                    <option value="0">a giraffe</option>
-                    <option value="0">a rhino</option> 
-                    <option value="0">a tiger</option>                                           
+                    <select id="animalSelector">
+                    <option value="Giraffe">a giraffe</option>
+                    <option value="Rhino">a rhino</option> 
+                    <option value="Tiger">a tiger</option>                                           
            			</select>
                     </div>
                     <div class="large-12 columns">
@@ -68,19 +67,25 @@
                             <p class="form-text">or</p>
                         </div>
                         <div class="small-12 medium-9 large-7 columns donation-wrapper">
-                            <input type="number" class="donation-input" onkeypress="return isNumberKey(event)">
+                        <input id="min" value="10" type="number" class="ghost-input" required>
+                        <input id="max" type="number" class="donation-input" data-validator="greater_than" data-greater-than="min" required>
                             <label class="fa fa-gbp donate-icon"></label>
+                                <span class="form-error">
+                                  Please insert a value from £11 and above
+                                </span>
                         </div>
                     </div>
                     <div class="large-12 columns">
                         <input type="checkbox" class="regular-checkbox" name="clicks" value="Click"> I want to do a monthly donation
-
-                        <button type="button" class="button donation-btn donation-btn-2">Donate now</button>
+                        <button type="submit" value="Donate now" class="button donation-btn donation-btn-2">Donate now</button>
                     </div>
                 </form>
             </div>
             <section class="large-3 columns animal-img">
-                <img src="img/giraffe-image.jpg" class="giraffe-img" alt="A giraffe standing alone">
+                <img src="img/giraffe-image.jpg" class="isGiraffe" alt="A giraffe standing alone">
+                <img src="img/tiger-image.jpg" class="hidden isTiger" alt="A tiger's face">
+                <img src="img/rhino-image.jpg" class="hidden isRhino" alt="A rhino standing alone">  
+                <div class="inner-box-ghost"><img src="img/blank-image.jpg" alt=""></div>         
             </section>
         </section>
     </article>
@@ -152,7 +157,12 @@ Morbi mi dui, luctus ac vestibulum in, dapibus id ante. Vivamus eu odio non mi f
             </section>
         </article>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>      
+    <script src="js/foundation.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 
 </html>
