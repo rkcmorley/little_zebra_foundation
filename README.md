@@ -22,6 +22,6 @@ Day Two and Three
 
 Day Four
 -------------- 
-- Updated CSS file for the donation widget
-- Created jQuery file for the donation widget's function
+- Updated CSS file for the webpage
+- Created jQuery file for the donation widget's function (Form validation, image change based on selection and buttons behaviour)
 - Used Git for version control
